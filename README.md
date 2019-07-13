@@ -14,37 +14,48 @@ These instructions will get you a copy of the project up and running on your loc
 
   ```
   Burger
+    - config
+      - connection.js
+      - orm.js
+    - controllers
+      - burgers_controller.js
+    - db
+      - schema.sql
+      - seeds.sql
+    - models
+      - burger.js
+    - public
+      - assets
+        - css
+          - burgers_style.css
+        - img
+          - burger.pn
+        - js
+          - burgers.js
+    - views
+      - layouts
+        - main.handlebars
+      - partials
+        - burger-block.handlebars
+      - index.handlebars        
     - .gitignore
-    - app
-      - data
-        - friends.js
-      - javascript
-        - survey.js
-      - public
-        - home.html
-        - survey.html
-      - routing
-        - apiRoutes.js
-        - htmlRoutes.js
     - node_modules
     - package.json
     - server.js
   ```
 
-2. The file `home.html` is the home page.
-3. The file `survey.html` contains the user survey.
-4. The server is created by the script `server.js` and it is designated as the start script. It requires the npm packages `express` and `path`.
-5. The `htmlRoutes.js` file include two routes:
-   * A GET Route to `/survey` which displays the survey page.
-   * A default, catch-all route that leads to `home.html` which displays the home page.
-6. The `apiRoutes.js` file contains two routes:
-   * A GET route with the url `/api/friends`. This is used to display a JSON of all possible friends.
-   * A POST routes `/api/friends`. This is used to handle incoming survey results. This route will also be used to handle the compatibility logic.
-7. The `survey.js` file contains the event handing and POST routes to the apiRoutes.js.
+1. The file `main.handlebars` is the main layout that is populated by `index.handlebars` and `burger-block.handlebars`.
+2. The server is created by the script `server.js` and it is designated as the start script. It requires the npm package `express`.
+3. This project uses the MVC design pattern where:
+   * Model: `burger.js`
+   * View:  `main.handlebars`, `index.handlebars`, `burger-block.handlebars`
+   * Controller: `burgers_controller.js`
+4. The proprietary secret sauce for our database mapping is in `orm.js`.
+
 
 ### Installing
 
-1. To install source files use git to clone files from https://github.com/ckaoki/friendFinder.
+1. To install source files use git to clone files from https://github.com/ckaoki/burger.
 2. In a bash terminal or Visual Code terminal navigate to the directory that you downloaded the files from github.
 3. Install the Node package (express) by entering the following in the terminal:   
     *npm install* 
@@ -54,22 +65,18 @@ These instructions will get you a copy of the project up and running on your loc
    *git push heroku master*
 
 ### Operation
-To view friendFinder navigate to https://cullanheroku.herokuapp.com/.
-The friendFinder app can be operated on the local host as instructed below.
+To view Burger page navigate to TBD.
+The Burger app can be operated on the local host as instructed below.
 1. Using a browser navigate to the main page:   
     *localhost:3000*  
-2. Click the button *Go to Survey* to begin the survey.  
-3. Answer all questions and the click the *Submit* button to find a friend.
-4. A window will appear showing you a friend with the closest compatibility.
-5. Click the link *API Friends List* to show all friends in the database.
-6. Click the link *GitHub Repo* to go to the source files. 
+2. In the left column *Burgers that I will devour!* Click the button *Devour it* next to a burger you wish to eat to move it to the *Burgers that I've devoured!* column.  
+3. In the right column *Burgers that I've devour!* Click the button *Regurgitate* next to a burger you wish to put back to move it to the *Burgers that I will devour!* column. 
+4. To add a new burger enter the name of the burger in the *Burger Name* text box and click the button *Add Burger*. Your new burger will be added to the *Burgers that I will devour!* column. 
 
 
 ## Running the tests
 
-Validation of friendFinder was perform using a chrome browser. FriendFinder was run as directed in the previous section - **Operation**.  
-Extensive unit testing was also performed on all routes and the compatibility algorithm.
-
+Validation of Burger app was perform using a chrome browser. Burger was run as directed in the previous section - **Operation**.  
 
 ### Break down into end to end tests
 
@@ -81,7 +88,7 @@ I'm starting to get some style.
 
 ## Deployment
 
-Navigate to https://github.com/ckaoki/friendFinder to clone.
+Navigate to https://github.com/ckaoki/burger to clone.
 
 ## Built With
 
@@ -100,7 +107,7 @@ Implementing textual hints.
 
 ## Authors
 
-* **Cullan Aoki** - *Initial work* - https://github.com/ckaoki/friendFinder
+* **Cullan Aoki** - *Initial work* - https://github.com/ckaoki/burger
 
 ## License
 
