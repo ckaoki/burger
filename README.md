@@ -65,7 +65,7 @@ These instructions will get you a copy of the project up and running on your loc
    *git push heroku master*
 
 ### Operation
-To view Burger page navigate to TBD.
+To view Burger page navigate to https://powerful-basin-94362.herokuapp.com/.
 The Burger app can be operated on the local host as instructed below.
 1. Using a browser navigate to the main page:   
     *localhost:3000*  
