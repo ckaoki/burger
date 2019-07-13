@@ -1,6 +1,6 @@
 
 <div class="container text-center bg-primary" id="header">
-  <h1>Burgers!</h1>
+  <h1>I Love Burgers!</h1>
 </div>
 <div class="container bg-secondary rounded-bottom" id="burgerContainer">
   <div class="row">
@@ -18,7 +18,7 @@
       <img src="assets/img/burger.png" id="burger" alt="Big Burger">
     </div>
     {{!-- Burgers devoured --}}
-    <div class="col-4">
+    <div class="col-4" id="burgersDevoured">
       <h5>Burgers that I've devoured!</h5>
       {{#each burgers}}
         {{#if devoured}}
@@ -29,7 +29,7 @@
   </div>
   {{!-- Add new burger --}}
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 text-center">
       <h2>Add a Burger</h2>
       <form class="create-form">
 
@@ -38,13 +38,7 @@
           <input type="text" id="newBurger" name="name">
           <button type="submit" align="right">Add Burger</button>
         </div>
-
-        <div class="form-group">
-          <label for="devoured">Devoured?</label><br>
-          <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-          <input type="radio" name="devoured" value="0"> Not_Devoured
-        </div>
-
+        
       </form>
     </div>
   </div>
